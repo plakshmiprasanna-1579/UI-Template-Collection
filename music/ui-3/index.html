@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SoundWave</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            SoundWave
+        </div>
+
+        <nav>
+
+            <a href="#">Home</a>
+            <a href="#">Discover</a>
+            <a href="#">Library</a>
+
+        </nav>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search tracks..."
+        >
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+
+                <p>DISCOVER NEW MUSIC</p>
+
+                <h1>Find your sound.</h1>
+
+                <p>
+                    Discover independent artists,
+                    new tracks and trending music.
+                </p>
+
+                <button onclick="discover()">
+                    Explore Music
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Trending Tracks</h2>
+
+
+            <div class="track-list">
+
+
+                <div class="track">
+
+                    <div class="track-image">
+                        🎧
+                    </div>
+
+                    <div class="track-details">
+
+                        <h3>Midnight City</h3>
+
+                        <p>Alex Beats</p>
+
+                        <div class="wave">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        onclick="playTrack('Midnight City')"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+
+                <div class="track">
+
+                    <div class="track-image">
+                        🌃
+                    </div>
+
+                    <div class="track-details">
+
+                        <h3>City Lights</h3>
+
+                        <p>Neon Dreams</p>
+
+                        <div class="wave">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        onclick="playTrack('City Lights')"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+
+                <div class="track">
+
+                    <div class="track-image">
+                        🌊
+                    </div>
+
+                    <div class="track-details">
+
+                        <h3>Ocean Waves</h3>
+
+                        <p>Blue Horizon</p>
+
+                        <div class="wave">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        onclick="playTrack('Ocean Waves')"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Popular Artists</h2>
+
+            <div class="artists">
+
+                <div class="artist">
+                    <div>🎤</div>
+                    <p>Alex Beats</p>
+                    <small>124K followers</small>
+                </div>
+
+                <div class="artist">
+                    <div>🎸</div>
+                    <p>Neon Dreams</p>
+                    <small>98K followers</small>
+                </div>
+
+                <div class="artist">
+                    <div>🎹</div>
+                    <p>Blue Horizon</p>
+                    <small>76K followers</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+
+            <strong id="currentTrack">
+                Select a track
+            </strong>
+
+            <p>SoundWave</p>
+
+        </div>
+
+        <div class="controls">
+
+            <button onclick="previousTrack()">
+                ⏮
+            </button>
+
+            <button
+                id="playButton"
+                onclick="togglePlay()"
+            >
+                ▶
+            </button>
+
+            <button onclick="nextTrack()">
+                ⏭
+            </button>
+
+        </div>
+
+        <div class="volume">
+
+            🔊
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="70"
+            >
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

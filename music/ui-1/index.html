@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h1 class="logo">Music</h1>
+
+        <nav>
+
+            <a href="#" onclick="showHome()">🏠 Home</a>
+
+            <a href="#" onclick="showSearch()">🔍 Search</a>
+
+            <a href="#" onclick="showLibrary()">📚 Your Library</a>
+
+        </nav>
+
+        <div class="playlist-menu">
+
+            <h3>Your Playlists</h3>
+
+            <p>Daily Vibes</p>
+            <p>Night Drive</p>
+            <p>Morning Hits</p>
+            <p>Top Hits</p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Top Bar -->
+
+        <header class="top-bar">
+
+            <button class="arrow-button">‹</button>
+            <button class="arrow-button">›</button>
+
+            <div class="profile">
+                👤 Pooja
+            </div>
+
+        </header>
+
+
+        <!-- Home -->
+
+        <section id="homeSection">
+
+            <div class="welcome">
+
+                <h1>Good Afternoon</h1>
+
+                <p>
+                    Discover music made for you
+                </p>
+
+            </div>
+
+
+            <!-- Made For You -->
+
+            <section class="music-section">
+
+                <h2>Made For You</h2>
+
+                <div class="music-grid">
+
+
+                    <!-- Daily Vibes -->
+
+                    <div class="music-card"
+                         onclick="openPlaylist('daily')">
+
+                        <div class="album">
+                            🎵
+                        </div>
+
+                        <h3>Daily Vibes</h3>
+
+                        <p>
+                            Relaxing music for your day
+                        </p>
+
+                    </div>
+
+
+                    <!-- Night Drive -->
+
+                    <div class="music-card"
+                         onclick="openPlaylist('night')">
+
+                        <div class="album">
+                            🌙
+                        </div>
+
+                        <h3>Night Drive</h3>
+
+                        <p>
+                            Music for late night rides
+                        </p>
+
+                    </div>
+
+
+                    <!-- Morning Hits -->
+
+                    <div class="music-card"
+                         onclick="openPlaylist('morning')">
+
+                        <div class="album">
+                            ☀️
+                        </div>
+
+                        <h3>Morning Hits</h3>
+
+                        <p>
+                            Start your morning with music
+                        </p>
+
+                    </div>
+
+
+                    <!-- Top Hits -->
+
+                    <div class="music-card"
+                         onclick="openPlaylist('top')">
+
+                        <div class="album">
+                            🔥
+                        </div>
+
+                        <h3>Top Hits</h3>
+
+                        <p>
+                            Popular songs this week
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Playlist Section -->
+
+            <section id="playlistSection"
+                     class="playlist-section">
+
+                <div class="playlist-header">
+
+
+                    <div class="playlist-cover"
+                         id="playlistCover">
+
+                        🎵
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="playlist-label">
+                            PLAYLIST
+                        </p>
+
+                        <h2 id="playlistTitle">
+                            Select a playlist
+                        </h2>
+
+                        <p id="playlistDescription">
+
+                            Click a playlist above
+                            to see the songs.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Songs will appear here -->
+
+                <div id="songList">
+
+                </div>
+
+            </section>
+
+
+            <!-- Popular Artists -->
+
+            <section class="music-section">
+
+                <h2>Popular Artists</h2>
+
+                <div class="artist-grid">
+
+
+                    <div class="artist-card">
+
+                        <div class="artist-image">
+                            🎤
+                        </div>
+
+                        <h3>Aria</h3>
+
+                        <p>Artist</p>
+
+                    </div>
+
+
+                    <div class="artist-card">
+
+                        <div class="artist-image">
+                            🎸
+                        </div>
+
+                        <h3>Nova</h3>
+
+                        <p>Artist</p>
+
+                    </div>
+
+
+                    <div class="artist-card">
+
+                        <div class="artist-image">
+                            🎹
+                        </div>
+
+                        <h3>Leo</h3>
+
+                        <p>Artist</p>
+
+                    </div>
+
+
+                    <div class="artist-card">
+
+                        <div class="artist-image">
+                            🎧
+                        </div>
+
+                        <h3>Luna</h3>
+
+                        <p>Artist</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- Search Section -->
+
+        <section id="searchSection"
+                 class="hidden-section">
+
+            <h1>Search</h1>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="What do you want to listen to?"
+                onkeyup="searchMusic()"
+            >
+
+            <div id="searchResults">
+
+                <p>Search for songs or artists.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Library Section -->
+
+        <section id="librarySection"
+                 class="hidden-section">
+
+            <h1>Your Library</h1>
+
+            <div class="library-list">
+
+                <div onclick="openPlaylist('daily')">
+                    🎵 Daily Vibes
+                </div>
+
+                <div onclick="openPlaylist('night')">
+                    🌙 Night Drive
+                </div>
+
+                <div onclick="openPlaylist('morning')">
+                    ☀️ Morning Hits
+                </div>
+
+                <div onclick="openPlaylist('top')">
+                    🔥 Top Hits
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Bottom Player -->
+
+    <footer class="player">
+
+        <div class="now-playing">
+
+            <div class="mini-cover">
+                🎵
+            </div>
+
+            <div>
+
+                <strong id="currentSong">
+                    No song selected
+                </strong>
+
+                <p id="currentArtist">
+                    Select a song
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="player-controls">
+
+            <button onclick="previousSong()">
+                ⏮
+            </button>
+
+            <button
+                id="playButton"
+                class="play-button"
+                onclick="playPause()">
+
+                ▶
+
+            </button>
+
+            <button onclick="nextSong()">
+                ⏭
+            </button>
+
+        </div>
+
+
+        <div class="volume">
+
+            🔊
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="70"
+            >
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

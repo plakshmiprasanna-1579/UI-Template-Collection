@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Apple Music Style</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+             Music
+        </div>
+
+        <nav>
+
+            <a href="#">Home</a>
+            <a href="#">Listen Now</a>
+            <a href="#">Browse</a>
+            <a href="#">Radio</a>
+
+        </nav>
+
+        <button class="profile">
+            Account
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+
+                <p>FEATURED PLAYLIST</p>
+
+                <h1>Feel Good Music</h1>
+
+                <p>
+                    The perfect collection of songs
+                    to brighten your day.
+                </p>
+
+                <button onclick="startPlaylist()">
+                    ▶ Play Now
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <div class="title-row">
+
+                <h2>Recently Played</h2>
+
+                <button onclick="showMessage()">
+                    See All
+                </button>
+
+            </div>
+
+
+            <div class="album-grid">
+
+                <div class="album-card">
+
+                    <div class="cover cover1">
+                        🎵
+                    </div>
+
+                    <h3>Golden Hour</h3>
+
+                    <p>Various Artists</p>
+
+                </div>
+
+
+                <div class="album-card">
+
+                    <div class="cover cover2">
+                        🌊
+                    </div>
+
+                    <h3>Ocean Sounds</h3>
+
+                    <p>Nature Beats</p>
+
+                </div>
+
+
+                <div class="album-card">
+
+                    <div class="cover cover3">
+                        🌙
+                    </div>
+
+                    <h3>Late Night</h3>
+
+                    <p>Dream Music</p>
+
+                </div>
+
+
+                <div class="album-card">
+
+                    <div class="cover cover4">
+                        ☀️
+                    </div>
+
+                    <h3>Morning Energy</h3>
+
+                    <p>Daily Mix</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Made For You</h2>
+
+            <div class="playlist-list">
+
+                <div class="playlist">
+
+                    <span>❤️</span>
+
+                    <div>
+                        <h3>Favorites Mix</h3>
+                        <p>Your favorite songs</p>
+                    </div>
+
+                    <button onclick="play('Favorites Mix')">
+                        ▶
+                    </button>
+
+                </div>
+
+
+                <div class="playlist">
+
+                    <span>🎧</span>
+
+                    <div>
+                        <h3>Chill Mix</h3>
+                        <p>Relax and enjoy</p>
+                    </div>
+
+                    <button onclick="play('Chill Mix')">
+                        ▶
+                    </button>
+
+                </div>
+
+
+                <div class="playlist">
+
+                    <span>🔥</span>
+
+                    <div>
+                        <h3>Trending Now</h3>
+                        <p>Popular music</p>
+                    </div>
+
+                    <button onclick="play('Trending Now')">
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+
+            <strong id="nowPlaying">
+                Nothing Playing
+            </strong>
+
+            <p>Music Player</p>
+
+        </div>
+
+        <div class="controls">
+
+            <button onclick="previous()">⏮</button>
+
+            <button
+                onclick="togglePlay()"
+                id="play"
+            >
+                ▶
+            </button>
+
+            <button onclick="next()">⏭</button>
+
+        </div>
+
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="40"
+        >
+
+    </footer>
+
+
+    <div id="message"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

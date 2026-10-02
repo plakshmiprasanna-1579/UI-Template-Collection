@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #d88181;
+
+    color: #222;
+
+    padding-bottom: 90px;
+}
+
+header {
+    height: 65px;
+
+    background: #671d1d;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+
+    gap: 25px;
+
+    flex: 1;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+}
+
+header input {
+    width: 260px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 4px;
+}
+
+main {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+}
+
+.hero {
+    height: 280px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5500,
+            #ff8a50
+        );
+
+    color: white;
+
+    padding: 50px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 45px;
+}
+
+.hero p {
+    margin: 12px 0;
+}
+
+.hero button {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    background: white;
+
+    color: #ff5500;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.track-list {
+    background: white;
+
+    border: 1px solid #ddd;
+}
+
+.track {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.track:last-child {
+    border-bottom: none;
+}
+
+.track-image {
+    width: 70px;
+
+    height: 70px;
+
+    background: #ddd;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.track-details {
+    flex: 1;
+}
+
+.track-details p {
+    color: #777;
+
+    margin: 5px 0 10px;
+}
+
+.track button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff5500;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.wave {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    height: 30px;
+}
+
+.wave span {
+    width: 4px;
+
+    background: #ff5500;
+
+    border-radius: 5px;
+}
+
+.wave span:nth-child(1) {
+    height: 12px;
+}
+
+.wave span:nth-child(2) {
+    height: 22px;
+}
+
+.wave span:nth-child(3) {
+    height: 16px;
+}
+
+.wave span:nth-child(4) {
+    height: 28px;
+}
+
+.wave span:nth-child(5) {
+    height: 18px;
+}
+
+.wave span:nth-child(6) {
+    height: 25px;
+}
+
+.wave span:nth-child(7) {
+    height: 13px;
+}
+
+.wave span:nth-child(8) {
+    height: 27px;
+}
+
+.wave span:nth-child(9) {
+    height: 19px;
+}
+
+.wave span:nth-child(10) {
+    height: 25px;
+}
+
+.wave span:nth-child(11) {
+    height: 15px;
+}
+
+.wave span:nth-child(12) {
+    height: 22px;
+}
+
+
+/* Artists */
+
+.artists {
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.artist {
+    width: 180px;
+
+    background: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 1px solid #ddd;
+}
+
+.artist div {
+    width: 100px;
+
+    height: 100px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #ddd;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+.artist small {
+    color: #999;
+}
+
+
+/* Footer player */
+
+footer {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    background: white;
+
+    border-top: 1px solid #ccc;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 30px;
+
+    z-index: 20;
+}
+
+footer p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+.controls {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.controls button {
+    border: none;
+
+    background: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+#playButton {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #ff5500;
+
+    color: white;
+}
+
+.volume {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.volume input {
+    width: 120px;
+}
