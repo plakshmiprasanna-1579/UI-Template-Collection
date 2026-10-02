@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaRush - Hot Pizza. Happy Moments.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <div class="logo-icon">🍕</div>
+        <div>
+            <h1>PizzaRush</h1>
+            <span>Hot. Fresh. Fast.</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#why-us">Why Us</a>
+    </nav>
+
+    <div class="header-actions">
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Search pizza, sides...">
+        </div>
+        <button class="cart-btn" id="cartButton">
+            🛒 <span>Cart</span>
+            <b id="cartCount">0</b>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="hero-tag">🔥 Freshly baked every time</span>
+        <h2>Hot pizza.<br><span>Happy moments.</span></h2>
+        <p>Crave it. Order it. Love it. Get your favourite pizza delivered hot and fresh.</p>
+
+        <div class="hero-buttons">
+            <a href="#menu" class="primary-btn">Order Now →</a>
+            <a href="#offers" class="secondary-btn">View Offers</a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <strong>30 min</strong>
+                <span>Fast Delivery</span>
+            </div>
+            <div>
+                <strong>4.8 ★</strong>
+                <span>Customer Rating</span>
+            </div>
+            <div>
+                <strong>100%</strong>
+                <span>Fresh Ingredients</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=90" alt="Fresh Pizza">
+        <div class="floating-price">
+            <span>Starting from</span>
+            <strong>₹199</strong>
+        </div>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="section-heading">
+        <div>
+            <span class="small-title">EXPLORE MENU</span>
+            <h2>What are you craving?</h2>
+        </div>
+        <p>Choose your favourite category</p>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card active" data-category="All">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=85" alt="All">
+            <div class="category-overlay">
+                <h3>All</h3>
+                <p>Everything you love</p>
+            </div>
+        </div>
+
+        <div class="category-card" data-category="Veg Pizza">
+            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=85" alt="Veg Pizza">
+            <div class="category-overlay">
+                <h3>Veg Pizza</h3>
+                <p>Fresh & delicious</p>
+            </div>
+        </div>
+
+        <div class="category-card" data-category="Non-Veg">
+            <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=600&q=85" alt="Non Veg Pizza">
+            <div class="category-overlay">
+                <h3>Non-Veg</h3>
+                <p>Loaded with flavour</p>
+            </div>
+        </div>
+
+        <div class="category-card" data-category="Sides">
+            <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=85" alt="Sides">
+            <div class="category-overlay">
+                <h3>Sides</h3>
+                <p>Perfect companions</p>
+            </div>
+        </div>
+
+        <div class="category-card" data-category="Desserts">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=90" alt="Desserts">
+            <div class="category-overlay">
+                <h3>Desserts</h3>
+                <p>Sweet treats</p>
+            </div>
+        </div>
+
+        <div class="category-card" data-category="Drinks">
+            <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=85" alt="Drinks">
+            <div class="category-overlay">
+                <h3>Drinks</h3>
+                <p>Cool & refreshing</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="offers" id="offers">
+    <div class="offer-content">
+        <span class="small-title">LIMITED TIME</span>
+        <h2>Big pizza.<br>Small price.</h2>
+        <p>Get ₹150 OFF on your first order. Use code <strong>PIZZARUSH150</strong></p>
+        <button class="offer-btn" id="copyCoupon">Copy Coupon</button>
+    </div>
+
+    <div class="offer-pizza">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=90" alt="Pizza Offer">
+    </div>
+</section>
+
+<section class="menu-section" id="menu">
+    <div class="section-heading menu-heading">
+        <div>
+            <span class="small-title">OUR MENU</span>
+            <h2>Pick your favourite</h2>
+        </div>
+
+        <div class="menu-controls">
+            <select id="sortSelect">
+                <option value="default">Sort By</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="All">All</button>
+        <button class="filter-btn" data-filter="Veg Pizza">Veg Pizza</button>
+        <button class="filter-btn" data-filter="Non-Veg">Non-Veg</button>
+        <button class="filter-btn" data-filter="Sides">Sides</button>
+        <button class="filter-btn" data-filter="Desserts">Desserts</button>
+        <button class="filter-btn" data-filter="Drinks">Drinks</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="empty-state" id="emptyState">
+        <div>🍕</div>
+        <h3>No items found</h3>
+        <p>Try another search or category.</p>
+    </div>
+</section>
+
+<section class="why-us" id="why-us">
+    <div class="section-heading centered">
+        <span class="small-title">WHY PIZZARUSH</span>
+        <h2>Made for pizza lovers</h2>
+        <p>Everything you need for a perfect pizza experience.</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🔥</div>
+            <h3>Freshly Baked</h3>
+            <p>Every pizza is prepared fresh and baked when you order.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Delivery</h3>
+            <p>Hot food delivered quickly to your doorstep.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🥬</div>
+            <h3>Quality Ingredients</h3>
+            <p>Fresh vegetables, premium cheese and delicious toppings.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💙</div>
+            <h3>Made With Care</h3>
+            <p>We make every order with attention to taste and quality.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-main">
+        <div class="footer-brand">
+            <div class="logo">
+                <div class="logo-icon">🍕</div>
+                <div>
+                    <h1>PizzaRush</h1>
+                    <span>Hot. Fresh. Fast.</span>
+                </div>
+            </div>
+            <p>Bringing happiness to your table, one pizza at a time.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#offers">Offers</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Help</h3>
+            <a href="#">Contact Us</a>
+            <a href="#">Track Order</a>
+            <a href="#">FAQs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="socials">
+                <span>Instagram</span>
+                <span>Facebook</span>
+                <span>Twitter</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 PizzaRush. Demo food ordering website.</p>
+    </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <div>
+            <span class="small-title">YOUR ORDER</span>
+            <h2>Your Cart</h2>
+        </div>
+        <button id="closeCart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+        <div>🛒</div>
+        <h3>Your cart is empty</h3>
+        <p>Add something delicious!</p>
+    </div>
+
+    <div class="cart-summary" id="cartSummary">
+        <div>
+            <span>Subtotal</span>
+            <strong id="subtotal">₹0</strong>
+        </div>
+        <div>
+            <span>Delivery</span>
+            <strong id="delivery">₹40</strong>
+        </div>
+        <div class="discount-row">
+            <span>Discount</span>
+            <strong id="discount">-₹0</strong>
+        </div>
+        <div class="total-row">
+            <span>Total</span>
+            <strong id="total">₹0</strong>
+        </div>
+
+        <div class="coupon-box">
+            <input type="text" id="couponInput" placeholder="Coupon code">
+            <button id="applyCoupon">Apply</button>
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout →</button>
+    </div>
+</div>
+
+<div class="product-modal" id="productModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+
+        <div class="modal-image">
+            <img id="modalImage" src="" alt="">
+        </div>
+
+        <div class="modal-details">
+            <span class="modal-category" id="modalCategory"></span>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-rating" id="modalRating"></div>
+            <p id="modalDescription"></p>
+
+            <div class="option-group">
+                <label>Choose Size</label>
+                <div class="option-buttons" id="sizeOptions">
+                    <button data-size="Small">Small</button>
+                    <button class="selected" data-size="Medium">Medium</button>
+                    <button data-size="Large">Large</button>
+                </div>
+            </div>
+
+            <div class="option-group" id="crustGroup">
+                <label>Choose Crust</label>
+                <div class="option-buttons" id="crustOptions">
+                    <button class="selected" data-crust="Classic">Classic</button>
+                    <button data-crust="Thin">Thin</button>
+                    <button data-crust="Cheese Burst">Cheese Burst</button>
+                </div>
+            </div>
+
+            <div class="modal-bottom">
+                <strong id="modalPrice">₹199</strong>
+                <button class="primary-btn" id="modalAddBtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
