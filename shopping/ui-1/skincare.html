@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glowora - Skincare</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="shop-header">
+
+        <div class="logo">
+            GLOWORA
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="makeup.html">Makeup</a>
+            <a href="skincare.html" class="active">Skincare</a>
+            <a href="haircare.html">Haircare</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="Search skincare..."
+                onkeyup="searchProducts()"
+            >
+
+            <button class="cart-button" onclick="showCart()">
+                🛒 <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- BANNER -->
+    <section class="shop-banner">
+
+        <h1>Skincare Collection</h1>
+
+        <p>
+            Healthy Skin. Natural Glow. Everyday Confidence.
+        </p>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <button onclick="filterProducts('all')">
+            All
+        </button>
+
+        <button onclick="filterProducts('facewash')">
+            Face Wash
+        </button>
+
+        <button onclick="filterProducts('moisturizer')">
+            Moisturizers
+        </button>
+
+        <button onclick="filterProducts('serum')">
+            Serums
+        </button>
+
+        <button onclick="filterProducts('sunscreen')">
+            Sunscreen
+        </button>
+
+        <button onclick="filterProducts('mask')">
+            Face Masks
+        </button>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="product-grid" id="products">
+
+
+        <!-- PRODUCT 1 -->
+        <div class="shop-product" data-category="facewash">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Gentle Face Wash"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Gentle Hydrating Face Wash
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.6
+                </p>
+
+                <p class="price">
+                    ₹449
+                    <span>₹599</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Gentle Hydrating Face Wash', 449)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Gentle Hydrating Face Wash', 449)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+        <div class="shop-product" data-category="moisturizer">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Daily Moisturizer"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Daily Hydration Moisturizer
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.7
+                </p>
+
+                <p class="price">
+                    ₹599
+                    <span>₹749</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Daily Hydration Moisturizer', 599)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Daily Hydration Moisturizer', 599)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="shop-product" data-category="serum">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    30% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Vitamin C Serum"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Vitamin C Glow Serum
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.8
+                </p>
+
+                <p class="price">
+                    ₹699
+                    <span>₹999</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Vitamin C Glow Serum', 699)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Vitamin C Glow Serum', 699)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="shop-product" data-category="sunscreen">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    15% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Sunscreen"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Daily Protection Sunscreen SPF 50
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.5
+                </p>
+
+                <p class="price">
+                    ₹549
+                    <span>₹649</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Daily Protection Sunscreen SPF 50', 549)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Daily Protection Sunscreen SPF 50', 549)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="shop-product" data-category="mask">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    35% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Face Mask"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Refreshing Clay Face Mask
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.4
+                </p>
+
+                <p class="price">
+                    ₹399
+                    <span>₹599</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Refreshing Clay Face Mask', 399)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Refreshing Clay Face Mask', 399)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+        <div class="shop-product" data-category="serum">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Hyaluronic Serum"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Hyaluronic Acid Hydrating Serum
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.9
+                </p>
+
+                <p class="price">
+                    ₹749
+                    <span>₹999</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Hyaluronic Acid Hydrating Serum', 749)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Hyaluronic Acid Hydrating Serum', 749)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+        <div class="shop-product" data-category="moisturizer">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Night Cream"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Nourishing Night Cream
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.6
+                </p>
+
+                <p class="price">
+                    ₹649
+                    <span>₹799</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Nourishing Night Cream', 649)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Nourishing Night Cream', 649)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+        <div class="shop-product" data-category="facewash">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    10% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Foaming Cleanser"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Gentle Foaming Cleanser
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.3
+                </p>
+
+                <p class="price">
+                    ₹449
+                    <span>₹499</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Gentle Foaming Cleanser', 449)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Gentle Foaming Cleanser', 449)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ++++++++++++++++++++++++++++++++++++++++++
+    <footer>
+
+        <h2>GLOWORA</h2>
+
+        <p>
+            Beauty that makes you glow.
+        </p>
+
+        <p>
+            © 2026 Glowora. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
