@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.96);
+    border-bottom: 1px solid #252525;
+    padding: 16px 5%;
+    backdrop-filter: blur(15px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 25px;
+    font-weight: 800;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 3px;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    position: relative;
+    background:
+        linear-gradient(90deg, #050505 0%, rgba(5,5,5,.88) 38%, rgba(5,5,5,.25) 75%),
+        url("https://image.tmdb.org/t/p/original/9n2tJBplPbgR2Yb9U2W9b8R7r2Y.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.badge {
+    display: inline-block;
+    color: #ffb000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    color: #ccc;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    border: none;
+    border-radius: 7px;
+    padding: 13px 22px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.primary {
+    background: #e50914;
+    color: white;
+}
+
+.primary:hover {
+    background: #ff1823;
+}
+
+.secondary {
+    background: rgba(255,255,255,.12);
+    color: white;
+    border: 1px solid #555;
+}
+
+.section {
+    padding: 30px 5%;
+}
+
+.section-title,
+.page-title {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+}
+
+.card {
+    min-width: 175px;
+    width: 175px;
+    background: #141414;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+    border: 1px solid #222;
+}
+
+.card:hover {
+    transform: translateY(-7px) scale(1.02);
+    border-color: #e50914;
+}
+
+.card img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    display: block;
+    background: #202020;
+}
+
+.card-info {
+    padding: 11px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-meta {
+    color: #999;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.page {
+    min-height: 70vh;
+    padding: 55px 5%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 24px;
+}
+
+.grid .card {
+    width: 100%;
+}
+
+.language-grid,
+.genre-grid,
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+}
+
+.language,
+.genre,
+.profile {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.language:hover,
+.genre:hover,
+.profile:hover {
+    border-color: #e50914;
+    transform: translateY(-4px);
+}
+
+.detail {
+    min-height: 500px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #070707 30%, rgba(7,7,7,.7), #070707),
+        url("https://image.tmdb.org/t/p/original/9n2tJBplPbgR2Yb9U2W9b8R7r2Y.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-content {
+    max-width: 650px;
+}
+
+.detail h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    margin: 12px 0 20px;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #bbb;
+    font-size: 13px;
+}
+
+.detail-description {
+    color: #ccc;
+    line-height: 1.8;
+    margin-top: 22px;
+}
+
+.watch-page {
+    padding: 60px 5%;
+    min-height: 80vh;
+}
+
+.video-box {
+    height: 65vh;
+    background:
+        radial-gradient(circle, #333 0%, #080808 65%);
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-big {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #e50914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.video-title {
+    margin-top: 25px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 650px;
+    padding: 15px 18px;
+    background: #151515;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 30px;
+    font-family: inherit;
+}
+
+.empty {
+    padding: 50px;
+    color: #888;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 35px 5%;
+    border-top: 1px solid #222;
+    color: #777;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #e50914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+    nav {
+        gap: 18px;
+    }
+
+    .logo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 14px 5%;
+    }
+
+    nav {
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 6%;
+    }
+
+    .section {
+        padding: 25px 5%;
+    }
+
+    .card {
+        min-width: 145px;
+        width: 145px;
+    }
+
+    .card img {
+        height: 210px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}

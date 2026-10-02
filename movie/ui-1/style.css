@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07091a;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 16px 5%;
+    background: rgba(7,9,26,.96);
+    border-bottom: 1px solid #20254a;
+    backdrop-filter: blur(18px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #8b5cf6;
+    font-size: 25px;
+    font-weight: 800;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+nav a {
+    color: #c8cbea;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 3px;
+    white-space: nowrap;
+    transition: .25s;
+}
+
+nav a:hover {
+    color: #9d7cff;
+}
+
+.hero {
+    min-height: 590px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #060818 0%, rgba(6,8,24,.9) 40%, rgba(6,8,24,.2)),
+        url("https://image.tmdb.org/t/p/original/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #60a5fa;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    color: #b8bdd7;
+    line-height: 1.8;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    padding: 13px 22px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary {
+    background: #7c3aed;
+    color: white;
+}
+
+.primary:hover {
+    background: #8b5cf6;
+}
+
+.secondary {
+    color: white;
+    background: rgba(255,255,255,.08);
+    border: 1px solid #454b76;
+}
+
+.section {
+    padding: 30px 5%;
+}
+
+.section h2,
+.page-title {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+}
+
+.card {
+    min-width: 175px;
+    width: 175px;
+    background: #10132b;
+    border: 1px solid #24284d;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+    box-shadow: 0 12px 35px rgba(92,70,200,.25);
+}
+
+.card img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    display: block;
+    background: #141832;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 11px 3px;
+}
+
+.card-meta {
+    color: #858bad;
+    font-size: 11px;
+    padding: 0 11px 12px;
+}
+
+.page {
+    min-height: 70vh;
+    padding: 55px 5%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(175px,1fr));
+    gap: 24px;
+}
+
+.grid .card {
+    width: 100%;
+}
+
+.language-grid,
+.genre-grid,
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 18px;
+}
+
+.language,
+.genre,
+.profile {
+    background: #10132b;
+    border: 1px solid #292e59;
+    padding: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.language:hover,
+.genre:hover,
+.profile:hover {
+    border-color: #8b5cf6;
+    transform: translateY(-4px);
+}
+
+.detail {
+    min-height: 520px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,#060818 25%,rgba(6,8,24,.7),#060818),
+        url("https://image.tmdb.org/t/p/original/6oaL4DP75yABrd5EbC4H2cQZV8w.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-content {
+    max-width: 650px;
+}
+
+.detail h1 {
+    font-size: clamp(38px,5vw,65px);
+    margin: 12px 0 20px;
+}
+
+.meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #b4b8d3;
+    font-size: 13px;
+}
+
+.description {
+    color: #bdc1d9;
+    line-height: 1.8;
+    margin-top: 22px;
+}
+
+.video {
+    padding: 60px 5%;
+    min-height: 80vh;
+}
+
+.player {
+    height: 65vh;
+    background: radial-gradient(circle,#24295a,#050612 70%);
+    border: 1px solid #303665;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.search {
+    width: 100%;
+    max-width: 650px;
+    padding: 15px 18px;
+    background: #10132b;
+    color: white;
+    border: 1px solid #30365d;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 30px;
+    font-family: inherit;
+}
+
+.profile-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.empty {
+    color: #858bad;
+    padding: 50px;
+    text-align: center;
+}
+
+footer {
+    border-top: 1px solid #20254a;
+    padding: 35px 5%;
+    text-align: center;
+    color: #707694;
+}
+
+@media (max-width:900px) {
+    nav {
+        gap: 18px;
+    }
+
+    .logo {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    nav {
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 6%;
+    }
+
+    .card {
+        min-width: 145px;
+        width: 145px;
+    }
+
+    .card img {
+        height: 210px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+}
