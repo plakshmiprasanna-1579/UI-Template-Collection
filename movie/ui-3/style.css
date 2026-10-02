@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090b09;
+    color: #f5f0e6;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 16px 5%;
+    background: rgba(9,11,9,.97);
+    border-bottom: 1px solid #292b24;
+    backdrop-filter: blur(18px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #d8b978;
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+nav a {
+    color: #c8c4b9;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 3px;
+    white-space: nowrap;
+    transition: .25s;
+}
+
+nav a:hover {
+    color: #e0c98f;
+}
+
+.hero {
+    min-height: 600px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,#070907 0%,rgba(7,9,7,.9) 40%,rgba(7,9,7,.2)),
+        url("https://image.tmdb.org/t/p/original/6G1J6V7J8K9L0M1N2B3C4D5E.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #d8b978;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(44px,6vw,78px);
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    color: #b9b7ae;
+    line-height: 1.8;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.btn {
+    border-radius: 6px;
+    padding: 13px 22px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.primary {
+    background: #d8b978;
+    color: #111;
+}
+
+.primary:hover {
+    background: #ead49f;
+}
+
+.secondary {
+    color: #eee8db;
+    background: rgba(255,255,255,.07);
+    border: 1px solid #55564d;
+}
+
+.section {
+    padding: 32px 5%;
+}
+
+.section h2,
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+}
+
+.card {
+    min-width: 180px;
+    width: 180px;
+    background: #111411;
+    border: 1px solid #2b2d27;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #d8b978;
+    box-shadow: 0 15px 35px rgba(0,0,0,.5);
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    background: #181a16;
+}
+
+.card-title {
+    padding: 11px 11px 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-meta {
+    padding: 0 11px 12px;
+    color: #85857d;
+    font-size: 11px;
+}
+
+.page {
+    min-height: 70vh;
+    padding: 55px 5%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 24px;
+}
+
+.grid .card {
+    width: 100%;
+}
+
+.language-grid,
+.genre-grid,
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 18px;
+}
+
+.language,
+.genre,
+.profile-card {
+    background: #111411;
+    border: 1px solid #2d3029;
+    padding: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.language:hover,
+.genre:hover,
+.profile-card:hover {
+    border-color: #d8b978;
+    transform: translateY(-4px);
+}
+
+.detail {
+    min-height: 520px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,#070907 28%,rgba(7,9,7,.75),#070907),
+        url("https://image.tmdb.org/t/p/original/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-content {
+    max-width: 650px;
+}
+
+.detail h1 {
+    font-family: 'Playfair Display',serif;
+    font-size: clamp(40px,5vw,68px);
+    margin: 12px 0 20px;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #b9b7ae;
+    font-size: 13px;
+}
+
+.description {
+    color: #bdbbb2;
+    line-height: 1.8;
+    margin-top: 22px;
+}
+
+.watch {
+    padding: 60px 5%;
+    min-height: 80vh;
+}
+
+.player {
+    height: 65vh;
+    background: radial-gradient(circle,#30352c,#070907 70%);
+    border: 1px solid #373a32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    background: #d8b978;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.search {
+    width: 100%;
+    max-width: 650px;
+    padding: 15px 18px;
+    background: #111411;
+    border: 1px solid #363830;
+    color: white;
+    border-radius: 7px;
+    outline: none;
+    margin-bottom: 30px;
+    font-family: inherit;
+}
+
+.profile-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #173b2d;
+    color: #d8b978;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.empty {
+    padding: 50px;
+    text-align: center;
+    color: #77786f;
+}
+
+footer {
+    border-top: 1px solid #292b24;
+    padding: 35px 5%;
+    text-align: center;
+    color: #77786f;
+}
+
+@media (max-width:900px) {
+    nav {
+        gap: 18px;
+    }
+
+    .logo {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    nav {
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 6%;
+    }
+
+    .card {
+        min-width: 145px;
+        width: 145px;
+    }
+
+    .card img {
+        height: 210px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+}
