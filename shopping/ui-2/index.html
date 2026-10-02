@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYORA | Modern Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP OFFER BAR -->
+<div class="top-bar">
+    FREE SHIPPING ON ORDERS ABOVE ₹999
+    <span>•</span>
+    EXTRA 10% OFF ON FIRST ORDER
+</div>
+
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+        VYORA
+    </div>
+
+    <nav class="main-nav">
+
+        <a href="#" onclick="showCategory('all'); return false;">
+            Home
+        </a>
+
+        <a href="#" onclick="showCategory('dress'); return false;">
+            Dresses
+        </a>
+
+        <a href="#" onclick="showCategory('top'); return false;">
+            Tops
+        </a>
+
+        <a href="#" onclick="showCategory('jeans'); return false;">
+            Jeans
+        </a>
+
+        <a href="#" onclick="showCategory('accessories'); return false;">
+            Accessories
+        </a>
+
+        <a href="#" onclick="showCategory('sale'); return false;" class="sale-link">
+            SALE
+        </a>
+
+    </nav>
+
+
+    <div class="header-right">
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="Search for products..."
+                onkeyup="searchProducts()"
+            >
+
+        </div>
+
+
+        <button class="icon-btn" onclick="showWishlist()">
+            ♡
+        </button>
+
+
+        <button class="cart-btn" onclick="showCart()">
+
+            🛍
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            VYORA NEW COLLECTION
+        </p>
+
+        <h1>
+            WEAR YOUR<br>
+            <span>CONFIDENCE.</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover effortless fashion designed
+            for every version of you.
+        </p>
+
+        <button
+            class="hero-button"
+            onclick="showCategory('all')">
+
+            SHOP NEW ARRIVALS
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORY CARDS -->
+
+<section class="category-area">
+
+    <div class="section-title">
+
+        <p>EXPLORE VYORA</p>
+
+        <h2>
+            Shop By Category
+        </h2>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <div
+            class="category-card"
+            onclick="showCategory('dress')">
+
+            <img
+                src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=85"
+                alt="Dresses">
+
+            <div class="category-text">
+
+                <h3>DRESSES</h3>
+
+                <span>
+                    Shop Now →
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="category-card"
+            onclick="showCategory('top')">
+
+            <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85"
+                alt="Tops">
+
+            <div class="category-text">
+
+                <h3>TOPS</h3>
+
+                <span>
+                    Shop Now →
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="category-card"
+            onclick="showCategory('jeans')">
+
+            <img
+                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=85"
+                alt="Jeans">
+
+            <div class="category-text">
+
+                <h3>JEANS</h3>
+
+                <span>
+                    Shop Now →
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            class="category-card"
+            onclick="showCategory('accessories')">
+
+            <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85"
+                alt="Accessories">
+
+            <div class="category-text">
+
+                <h3>ACCESSORIES</h3>
+
+                <span>
+                    Shop Now →
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+
+<section class="shop-section" id="products">
+
+    <div class="shop-heading">
+
+        <div>
+
+            <p class="small-heading">
+                VYORA COLLECTION
+            </p>
+
+            <h2 id="collectionTitle">
+                Trending Now
+            </h2>
+
+        </div>
+
+
+        <div class="shop-controls">
+
+            <span id="productCount">
+                12 products
+            </span>
+
+            <select
+                id="sortSelect"
+                onchange="sortProducts()">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="rating">
+                    Top Rated
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="productGrid">
+
+
+        <!-- 1 -->
+
+        <div class="product" data-category="dress">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    30% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85"
+                    alt="Summer Dress">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Elegant Summer Dress
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.8
+                </div>
+
+                <div class="price">
+                    ₹899
+                    <del>₹1,299</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Elegant Summer Dress',899)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 2 -->
+
+        <div class="product" data-category="top">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=85"
+                    alt="Casual Top">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Premium Casual Top
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.6
+                </div>
+
+                <div class="price">
+                    ₹499
+                    <del>₹699</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Premium Casual Top',499)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 3 -->
+
+        <div class="product" data-category="jeans">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=85"
+                    alt="Blue Jeans">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Classic Straight Jeans
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.7
+                </div>
+
+                <div class="price">
+                    ₹999
+                    <del>₹1,249</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Classic Straight Jeans',999)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 4 -->
+
+        <div class="product" data-category="dress">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    35% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=85"
+                    alt="Party Dress">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Evening Party Dress
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.9
+                </div>
+
+                <div class="price">
+                    ₹1,199
+                    <del>₹1,799</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Evening Party Dress',1199)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 5 -->
+
+        <div class="product" data-category="top">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85"
+                    alt="Oversized Shirt">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Oversized Casual Shirt
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.5
+                </div>
+
+                <div class="price">
+                    ₹699
+                    <del>₹899</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Oversized Casual Shirt',699)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 6 -->
+
+        <div class="product" data-category="accessories">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    40% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85"
+                    alt="Handbag">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Everyday Leather Bag
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.7
+                </div>
+
+                <div class="price">
+                    ₹799
+                    <del>₹1,299</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Everyday Leather Bag',799)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 7 -->
+
+        <div class="product" data-category="top">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    30% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=85"
+                    alt="Blouse">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Soft Premium Blouse
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.6
+                </div>
+
+                <div class="price">
+                    ₹599
+                    <del>₹849</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Soft Premium Blouse',599)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 8 -->
+
+        <div class="product" data-category="jeans">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=700&q=85"
+                    alt="Fashion Jeans">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    High Waist Jeans
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.8
+                </div>
+
+                <div class="price">
+                    ₹1,099
+                    <del>₹1,499</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('High Waist Jeans',1099)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 9 -->
+
+        <div class="product" data-category="dress">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85"
+                    alt="Floral Dress">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Floral Midi Dress
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.7
+                </div>
+
+                <div class="price">
+                    ₹949
+                    <del>₹1,199</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Floral Midi Dress',949)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 10 -->
+
+        <div class="product" data-category="accessories">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    35% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=700&q=85"
+                    alt="Fashion Accessories">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Minimal Fashion Bag
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.6
+                </div>
+
+                <div class="price">
+                    ₹749
+                    <del>₹1,149</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Minimal Fashion Bag',749)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 11 -->
+
+        <div class="product" data-category="top">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85"
+                    alt="Women's Top">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Relaxed Fit Top
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.5
+                </div>
+
+                <div class="price">
+                    ₹549
+                    <del>₹749</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Relaxed Fit Top',549)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 12 -->
+
+        <div class="product" data-category="accessories">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    30% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=700&q=85"
+                    alt="Handbag">
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    VYORA
+                </p>
+
+                <h3>
+                    Classic Shoulder Bag
+                </h3>
+
+                <div class="rating">
+                    ⭐ 4.8
+                </div>
+
+                <div class="price">
+                    ₹899
+                    <del>₹1,299</del>
+                </div>
+
+                <button
+                    class="add-btn"
+                    onclick="addToCart('Classic Shoulder Bag',899)">
+
+                    ADD TO BAG
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- PROMO -->
+
+<section class="promo">
+
+    <div>
+
+        <p>
+            VYORA EXCLUSIVE
+        </p>
+
+        <h2>
+            UP TO 50% OFF
+        </h2>
+
+        <span>
+            ON SELECTED STYLES
+        </span>
+
+        <br>
+
+        <button onclick="showCategory('all')">
+            SHOP SALE
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div>
+
+        <span>🚚</span>
+
+        <h3>
+            FREE SHIPPING
+        </h3>
+
+        <p>
+            On orders above ₹999
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <span>↩</span>
+
+        <h3>
+            EASY RETURNS
+        </h3>
+
+        <p>
+            7-day easy return policy
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <span>🔒</span>
+
+        <h3>
+            SECURE PAYMENT
+        </h3>
+
+        <p>
+            100% secure checkout
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <span>💬</span>
+
+        <h3>
+            SUPPORT
+        </h3>
+
+        <p>
+            We're here to help
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        VYORA
+    </div>
+
+    <div class="footer-links">
+
+        <a href="#">
+            About Us
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+
+        <a href="#">
+            Privacy
+        </a>
+
+        <a href="#">
+            Terms
+        </a>
+
+        <a href="#">
+            Returns
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 VYORA. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

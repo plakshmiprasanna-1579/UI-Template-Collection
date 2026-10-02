@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glowora - Haircare</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="shop-header">
+
+        <div class="logo">
+            GLOWORA
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="makeup.html">Makeup</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="haircare.html" class="active">Haircare</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <input
+                type="text"
+                id="searchBox"
+                placeholder="Search haircare..."
+                onkeyup="searchProducts()"
+            >
+
+            <button class="cart-button" onclick="showCart()">
+                🛒 <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- BANNER -->
+    <section class="shop-banner">
+
+        <h1>Haircare Collection</h1>
+
+        <p>
+            Healthy Hair. Natural Shine. Everyday Confidence.
+        </p>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+
+        <button onclick="filterProducts('all')">
+            All
+        </button>
+
+        <button onclick="filterProducts('shampoo')">
+            Shampoo
+        </button>
+
+        <button onclick="filterProducts('conditioner')">
+            Conditioner
+        </button>
+
+        <button onclick="filterProducts('oil')">
+            Hair Oil
+        </button>
+
+        <button onclick="filterProducts('mask')">
+            Hair Masks
+        </button>
+
+        <button onclick="filterProducts('serum')">
+            Hair Serum
+        </button>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="product-grid" id="products">
+
+
+        <!-- PRODUCT 1 -->
+        <div class="shop-product" data-category="shampoo">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Nourishing Shampoo"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Nourishing Hair Shampoo
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.6
+                </p>
+
+                <p class="price">
+                    ₹499
+                    <span>₹649</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Nourishing Hair Shampoo', 499)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Nourishing Hair Shampoo', 499)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+        <div class="shop-product" data-category="conditioner">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1626015365107-4e8e0f4c5f56?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Smooth Conditioner"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Smooth & Soft Conditioner
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.7
+                </p>
+
+                <p class="price">
+                    ₹549
+                    <span>₹699</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Smooth & Soft Conditioner', 549)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Smooth & Soft Conditioner', 549)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="shop-product" data-category="oil">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    30% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Hair Oil"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Herbal Hair Growth Oil
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.8
+                </p>
+
+                <p class="price">
+                    ₹399
+                    <span>₹599</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Herbal Hair Growth Oil', 399)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Herbal Hair Growth Oil', 399)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="shop-product" data-category="mask">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    15% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Hair Mask"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Deep Repair Hair Mask
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.5
+                </p>
+
+                <p class="price">
+                    ₹599
+                    <span>₹699</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Deep Repair Hair Mask', 599)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Deep Repair Hair Mask', 599)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="shop-product" data-category="serum">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    35% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Hair Serum"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Frizz Control Hair Serum
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.4
+                </p>
+
+                <p class="price">
+                    ₹449
+                    <span>₹699</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Frizz Control Hair Serum', 449)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Frizz Control Hair Serum', 449)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+        <div class="shop-product" data-category="shampoo">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    20% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Anti Dandruff Shampoo"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Fresh Scalp Shampoo
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.6
+                </p>
+
+                <p class="price">
+                    ₹449
+                    <span>₹599</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Fresh Scalp Shampoo', 449)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Fresh Scalp Shampoo', 449)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+        <div class="shop-product" data-category="conditioner">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    25% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Repair Conditioner"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Damage Repair Conditioner
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.5
+                </p>
+
+                <p class="price">
+                    ₹499
+                    <span>₹649</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Damage Repair Conditioner', 499)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Damage Repair Conditioner', 499)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+        <div class="shop-product" data-category="serum">
+
+            <div class="product-image">
+
+                <span class="discount">
+                    10% OFF
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="addWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=80"
+                    alt="Glowora Shine Hair Serum"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="brand">
+                    Glowora Beauty
+                </p>
+
+                <h3>
+                    Glossy Shine Hair Serum
+                </h3>
+
+                <p class="rating">
+                    ⭐ 4.7
+                </p>
+
+                <p class="price">
+                    ₹399
+                    <span>₹449</span>
+                </p>
+
+                <button
+                    class="bag-btn"
+                    onclick="addToCart('Glossy Shine Hair Serum', 399)"
+                >
+                    Add to Bag
+                </button>
+
+                <button
+                    class="details-btn"
+                    onclick="viewProduct('Glossy Shine Hair Serum', 399)"
+                >
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>GLOWORA</h2>
+
+        <p>
+            Beauty that makes you glow.
+        </p>
+
+        <p>
+            © 2026 Glowora. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

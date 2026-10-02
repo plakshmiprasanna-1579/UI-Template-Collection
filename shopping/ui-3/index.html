@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WESTBOURNE | Style. Refined.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="top-bar">
+    <span>FLAT 40% OFF</span>
+    <span>FREE SHIPPING ABOVE ₹999</span>
+    <span>NEW SEASON • NEW STYLE</span>
+</div>
+
+<header class="header">
+    <div class="logo">WESTBOURNE</div>
+
+    <div class="search-box">
+        <span>⌕</span>
+        <input type="text" id="searchInput" placeholder="Search for products, brands and more">
+    </div>
+
+    <div class="header-actions">
+        <button onclick="showToast('Profile coming soon')">
+            <span>♙</span>
+            <small>Profile</small>
+        </button>
+
+        <button onclick="showToast('Wishlist opened')">
+            <span>♡</span>
+            <small>Wishlist</small>
+        </button>
+
+        <button onclick="openCart()">
+            <span>♧</span>
+            <small>Bag <b id="bagCount">0</b></small>
+        </button>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="#home">HOME</a>
+    <a href="#women">WOMEN</a>
+    <a href="#men">MEN</a>
+    <a href="#kids">KIDS</a>
+    <a href="#footwear">FOOTWEAR</a>
+    <a href="#beauty">BEAUTY</a>
+    <a href="#accessories">ACCESSORIES</a>
+    <a href="#offers">OFFERS</a>
+</nav>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p>THE WESTBOURNE EDIT</p>
+        <h1>STYLE.<br>REFINED.</h1>
+        <span>Discover the new season collection.</span>
+        <button onclick="scrollToProducts()">SHOP NOW →</button>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="section-heading">
+        <p>EXPLORE</p>
+        <h2>Shop By Category</h2>
+    </div>
+
+    <div class="category-grid">
+        <div class="category-card" onclick="filterCategory('Women')">
+            <img src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=700">
+            <h3>Women</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Men')">
+            <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=700">
+            <h3>Men</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Kids')">
+            <img src="https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=700">
+            <h3>Kids</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Footwear')">
+            <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=700">
+            <h3>Footwear</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Beauty')">
+            <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=700">
+            <h3>Beauty</h3>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Accessories')">
+            <img src="https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=700">
+            <h3>Accessories</h3>
+        </div>
+    </div>
+</section>
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+        <p>CURATED FOR YOU</p>
+        <h2>Trending Now</h2>
+    </div>
+
+    <div class="filter-bar">
+        <button class="filter active" onclick="filterCategory('All')">All</button>
+        <button class="filter" onclick="filterCategory('Women')">Women</button>
+        <button class="filter" onclick="filterCategory('Men')">Men</button>
+        <button class="filter" onclick="filterCategory('Kids')">Kids</button>
+        <button class="filter" onclick="filterCategory('Footwear')">Footwear</button>
+        <button class="filter" onclick="filterCategory('Beauty')">Beauty</button>
+
+        <select id="sortSelect" onchange="sortProducts()">
+            <option value="default">Sort By</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+</section>
+
+<section class="deal-banner" id="offers">
+    <div>
+        <p>LIMITED TIME OFFER</p>
+        <h2>THE DEAL EDIT</h2>
+        <span>Up to 60% off on selected styles.</span>
+        <button onclick="scrollToProducts()">SHOP DEALS →</button>
+    </div>
+</section>
+
+<section class="new-season">
+    <div class="season-image">
+        <img src="https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1200">
+    </div>
+
+    <div class="season-content">
+        <p>NEW SEASON</p>
+        <h2>Designed For<br>Everyday Elegance.</h2>
+        <span>Modern silhouettes, timeless essentials and effortless style.</span>
+        <button onclick="scrollToProducts()">EXPLORE COLLECTION →</button>
+    </div>
+</section>
+
+<section class="benefits">
+    <div>
+        <strong>FREE SHIPPING</strong>
+        <span>On orders above ₹999</span>
+    </div>
+
+    <div>
+        <strong>EASY RETURNS</strong>
+        <span>7-day hassle-free returns</span>
+    </div>
+
+    <div>
+        <strong>SECURE PAYMENT</strong>
+        <span>100% secure checkout</span>
+    </div>
+
+    <div>
+        <strong>24/7 SUPPORT</strong>
+        <span>We're here to help</span>
+    </div>
+</section>
+
+<section class="newsletter">
+    <p>STAY IN THE KNOW</p>
+    <h2>Join the Westbourne Edit</h2>
+    <span>Get exclusive offers, new arrivals and style inspiration.</span>
+
+    <div class="newsletter-box">
+        <input type="email" id="emailInput" placeholder="Enter your email address">
+        <button onclick="subscribe()">SUBSCRIBE</button>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-brand">
+        <h2>WESTBOURNE</h2>
+        <p>Style. Refined.</p>
+    </div>
+
+    <div>
+        <h4>SHOP</h4>
+        <a href="#women">Women</a>
+        <a href="#men">Men</a>
+        <a href="#kids">Kids</a>
+        <a href="#footwear">Footwear</a>
+    </div>
+
+    <div>
+        <h4>HELP</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">FAQs</a>
+    </div>
+
+    <div>
+        <h4>FOLLOW</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+    </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<aside class="cart" id="cart">
+    <div class="cart-header">
+        <h2>Your Bag</h2>
+        <button onclick="closeCart()">×</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-bottom">
+        <div>
+            <span>Total</span>
+            <strong id="cartTotal">₹0</strong>
+        </div>
+
+        <button onclick="checkout()">PROCEED TO CHECKOUT</button>
+    </div>
+</aside>
+
+<div class="modal" id="checkoutModal">
+    <div class="checkout-box">
+        <button class="close-modal" onclick="closeCheckout()">×</button>
+
+        <div id="checkoutContent">
+            <p>CHECKOUT</p>
+            <h2>Delivery Details</h2>
+
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <input type="text" id="address" placeholder="Address">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="pincode" placeholder="Pincode">
+
+            <button class="checkout-next" onclick="goToPayment()">CONTINUE TO PAYMENT</button>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

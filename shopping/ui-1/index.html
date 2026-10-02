@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glowora - Beauty & Skincare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- OFFER BAR -->
+    <div class="offer-bar">
+        ✨ GET 10% OFF ON YOUR FIRST ORDER — USE CODE:
+        <strong>GLOW10</strong> ✨
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            GLOWORA
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products, brands and more..."
+                oninput="searchProducts()">
+
+            <span>🔍</span>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <button onclick="showToast('Wishlist coming soon ❤️')">
+                ♡ Wishlist
+            </button>
+
+            <button onclick="showToast('Sign in feature coming soon 👤')">
+                👤 Sign In
+            </button>
+
+            <button onclick="openCart()" class="bag-button">
+                🛍 Bag
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <a href="#" onclick="scrollToSection('home'); return false;">
+            Home
+        </a>
+
+        <a href="#" onclick="scrollToSection('categories'); return false;">
+            Categories
+        </a>
+
+        <a href="#" onclick="exploreProduct('Makeup'); return false;">
+            Makeup
+        </a>
+
+        <a href="#" onclick="exploreProduct('Skincare'); return false;">
+            Skincare
+        </a>
+
+        <a href="#" onclick="exploreProduct('Haircare'); return false;">
+            Haircare
+        </a>
+
+        <a href="#" onclick="scrollToSection('offers'); return false;">
+            Offers
+        </a>
+
+        <a href="#" onclick="scrollToSection('beautyEdit'); return false;">
+            Beauty Edit
+        </a>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="small-heading">
+                YOUR BEAUTY. YOUR GLOW.
+            </span>
+
+            <h1>
+                Beauty that makes
+                <br>
+                <span>you glow.</span>
+            </h1>
+
+            <p>
+                Discover makeup, skincare and haircare
+                curated specially for your everyday glow.
+            </p>
+
+            <button onclick="scrollToSection('products')">
+                SHOP NOW →
+            </button>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=90"
+                alt="Beauty">
+
+        </div>
+
+    </section>
+
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip">
+
+        <div>
+            🚚
+            <strong>Free Shipping</strong>
+            <span>On orders above ₹499</span>
+        </div>
+
+        <div>
+            🔒
+            <strong>Secure Payments</strong>
+            <span>100% secure checkout</span>
+        </div>
+
+        <div>
+            💝
+            <strong>Genuine Products</strong>
+            <span>100% authentic beauty</span>
+        </div>
+
+        <div>
+            ↩️
+            <strong>Easy Returns</strong>
+            <span>Hassle-free returns</span>
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+
+        <div class="section-heading">
+
+            <span>
+                SHOP BY CATEGORY
+            </span>
+
+            <h2>
+                Find your beauty essentials
+            </h2>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <!-- MAKEUP -->
+            <div class="category-card"
+                onclick="exploreProduct('Makeup')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=90"
+                    alt="Makeup">
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Makeup
+                    </h3>
+
+                    <p>
+                        Explore Makeup →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKINCARE -->
+            <div class="category-card"
+                onclick="exploreProduct('Skincare')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=800&q=90"
+                    alt="Skincare">
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Skincare
+                    </h3>
+
+                    <p>
+                        Explore Skincare →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HAIRCARE -->
+            <div class="category-card"
+                onclick="exploreProduct('Haircare')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=90"
+                    alt="Haircare">
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Haircare
+                    </h3>
+
+                    <p>
+                        Explore Haircare →
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BODY CARE -->
+            <div class="category-card"
+                onclick="exploreProduct('Body Care')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=800&q=90"
+                    alt="Body Care">
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Body Care
+                    </h3>
+
+                    <p>
+                        Explore Body Care →
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BEAUTY BANNER -->
+    <section class="beauty-banner">
+
+        <img
+            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=90"
+            alt="Beauty">
+
+        <div class="beauty-banner-content">
+
+            <span>
+                THE BEAUTY EDIT
+            </span>
+
+            <h2>
+                Your glow,
+                <br>
+                your rules.
+            </h2>
+
+            <p>
+                Discover beauty products made for
+                every version of you.
+            </p>
+
+            <button onclick="scrollToSection('products')">
+                EXPLORE NOW →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="section products-section" id="products">
+
+        <div class="section-heading">
+
+            <span>
+                GLOWORA PICKS
+            </span>
+
+            <h2>
+                Beauty essentials
+            </h2>
+
+            <p>
+                Everything you need for your daily beauty routine.
+            </p>
+
+        </div>
+
+
+        <div class="product-toolbar">
+
+            <button onclick="showAllProducts()">
+                All Products
+            </button>
+
+            <select onchange="sortProducts(this.value)">
+
+                <option value="">
+                    Sort By
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card"
+                data-category="Makeup"
+                data-name="Velvet Matte Lipstick">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/7810601/pexels-photo-7810601.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Velvet Matte Lipstick">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        MAKEUP
+                    </span>
+
+                    <h3>
+                        Velvet Matte Lipstick
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹499
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Velvet Matte Lipstick',499)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card"
+                data-category="Makeup"
+                data-name="Glow Lip Gloss">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/7256082/pexels-photo-7256082.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Glow Lip Gloss">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        MAKEUP
+                    </span>
+
+                    <h3>
+                        Glow Lip Gloss
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹399
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Glow Lip Gloss',399)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card"
+                data-category="Makeup"
+                data-name="Perfect Foundation">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/5731811/pexels-photo-5731811.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Perfect Foundation">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        MAKEUP
+                    </span>
+
+                    <h3>
+                        Perfect Foundation
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹799
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Perfect Foundation',799)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card"
+                data-category="Makeup"
+                data-name="Eye Beauty Kit">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/2535913/pexels-photo-2535913.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Eye Beauty Kit">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        MAKEUP
+                    </span>
+
+                    <h3>
+                        Eye Beauty Kit
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹899
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Eye Beauty Kit',899)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product-card"
+                data-category="Skincare"
+                data-name="Vitamin C Serum">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/34939693/pexels-photo-34939693.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Vitamin C Serum">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        SKINCARE
+                    </span>
+
+                    <h3>
+                        Vitamin C Serum
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹699
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Vitamin C Serum',699)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product-card"
+                data-category="Skincare"
+                data-name="Glow Face Cream">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/7796975/pexels-photo-7796975.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Glow Face Cream">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        SKINCARE
+                    </span>
+
+                    <h3>
+                        Glow Face Cream
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹599
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Glow Face Cream',599)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+            <div class="product-card"
+                data-category="Skincare"
+                data-name="Gentle Face Wash">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/10825661/pexels-photo-10825661.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Gentle Face Wash">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        SKINCARE
+                    </span>
+
+                    <h3>
+                        Gentle Face Wash
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹349
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Gentle Face Wash',349)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+            <div class="product-card"
+                data-category="Skincare"
+                data-name="Daily Sunscreen SPF 50">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/6767776/pexels-photo-6767776.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Daily Sunscreen SPF 50">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        SKINCARE
+                    </span>
+
+                    <h3>
+                        Daily Sunscreen SPF 50
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹549
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Daily Sunscreen SPF 50',549)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 9 -->
+            <div class="product-card"
+                data-category="Haircare"
+                data-name="Silky Hair Shampoo">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/7440062/pexels-photo-7440062.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Silky Hair Shampoo">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HAIRCARE
+                    </span>
+
+                    <h3>
+                        Silky Hair Shampoo
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹449
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Silky Hair Shampoo',449)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 10 -->
+            <div class="product-card"
+                data-category="Haircare"
+                data-name="Hair Repair Mask">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/10427813/pexels-photo-10427813.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Hair Repair Mask">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HAIRCARE
+                    </span>
+
+                    <h3>
+                        Hair Repair Mask
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹649
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Hair Repair Mask',649)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 11 -->
+            <div class="product-card"
+                data-category="Haircare"
+                data-name="Hair Serum">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/10822130/pexels-photo-10822130.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Hair Serum">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HAIRCARE
+                    </span>
+
+                    <h3>
+                        Hair Serum
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹499
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Hair Serum',499)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 12 -->
+            <div class="product-card"
+                data-category="Haircare"
+                data-name="Hair Care Combo">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/10427813/pexels-photo-10427813.jpeg?auto=compress&cs=tinysrgb&w=700"
+                        alt="Hair Care Combo">
+
+                    <button
+                        class="wishlist"
+                        onclick="wishlist(event)">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HAIRCARE
+                    </span>
+
+                    <h3>
+                        Hair Care Combo
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹999
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Hair Care Combo',999)">
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BEAUTY EDIT -->
+    <section class="beauty-edit" id="beautyEdit">
+
+        <div class="beauty-edit-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=90"
+                alt="Beauty Edit">
+
+        </div>
+
+        <div class="beauty-edit-content">
+
+            <span>
+                GLOWORA BEAUTY EDIT
+            </span>
+
+            <h2>
+                Because every day
+                <br>
+                deserves a little glow.
+            </h2>
+
+            <p>
+                From everyday essentials to beauty
+                must-haves, find products that make
+                you feel confident and beautiful.
+            </p>
+
+            <button onclick="scrollToSection('products')">
+                SHOP BEAUTY →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- OFFERS -->
+    <section class="offers-section" id="offers">
+
+        <div class="offer-content">
+
+            <span>
+                LIMITED TIME OFFER
+            </span>
+
+            <h2>
+                Glow more.
+                <br>
+                Spend less.
+            </h2>
+
+            <p>
+                Get 10% off on your first order.
+            </p>
+
+            <div class="coupon-box">
+
+                <strong>
+                    GLOW10
+                </strong>
+
+                <button onclick="copyCoupon()">
+                    COPY CODE
+                </button>
+
+            </div>
+
+            <button onclick="scrollToSection('products')">
+                SHOP NOW
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    GLOWORA
+                </h2>
+
+                <p>
+                    Your everyday destination for
+                    beauty, skincare and self-care.
+                </p>
+
+                <div class="socials">
+                    Instagram &nbsp; | &nbsp;
+                    Facebook &nbsp; | &nbsp;
+                    Pinterest
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    SHOP
+                </h4>
+
+                <a href="#"
+                    onclick="exploreProduct('Makeup'); return false;">
+                    Makeup
+                </a>
+
+                <a href="#"
+                    onclick="exploreProduct('Skincare'); return false;">
+                    Skincare
+                </a>
+
+                <a href="#"
+                    onclick="exploreProduct('Haircare'); return false;">
+                    Haircare
+                </a>
+
+                <a href="#"
+                    onclick="exploreProduct('Body Care'); return false;">
+                    Body Care
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    HELP
+                </h4>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Shipping
+                </a>
+
+                <a href="#">
+                    Returns
+                </a>
+
+                <a href="#">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    ABOUT
+                </h4>
+
+                <a href="#">
+                    About Glowora
+                </a>
+
+                <a href="#">
+                    Careers
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Glowora. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- CART OVERLAY -->
+    <div
+        class="cart-overlay"
+        id="cartOverlay"
+        onclick="closeCart()">
+    </div>
+
+
+    <!-- CART PANEL -->
+    <div
+        class="cart-panel"
+        id="cartPanel">
+
+        <div class="cart-header">
+
+            <h2>
+                Your Bag
+            </h2>
+
+            <button onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="cartItems"
+            class="cart-items">
+        </div>
+
+
+        <div class="cart-coupon">
+
+            <input
+                type="text"
+                id="couponInput"
+                placeholder="Coupon code">
+
+            <button onclick="applyCoupon()">
+                Apply
+            </button>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+            <div>
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="cartSubtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Discount
+                </span>
+
+                <strong id="cartDiscount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                onclick="checkout()">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHECKOUT MODAL -->
+    <div
+        class="checkout-modal"
+        id="checkoutModal">
+
+        <div class="checkout-box">
+
+
+            <button
+                class="checkout-close"
+                onclick="closeCheckout()">
+                ×
+            </button>
+
+
+            <!-- PROGRESS -->
+            <div class="checkout-progress">
+
+                <div
+                    class="progress-step active"
+                    id="progress1">
+
+                    <span>
+                        1
+                    </span>
+
+                    <small>
+                        Address
+                    </small>
+
+                </div>
+
+
+                <div class="progress-line">
+                </div>
+
+
+                <div
+                    class="progress-step"
+                    id="progress2">
+
+                    <span>
+                        2
+                    </span>
+
+                    <small>
+                        Payment
+                    </small>
+
+                </div>
+
+
+                <div class="progress-line">
+                </div>
+
+
+                <div
+                    class="progress-step"
+                    id="progress3">
+
+                    <span>
+                        3
+                    </span>
+
+                    <small>
+                        Confirmation
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS STEP -->
+            <div
+                id="addressStep"
+                class="checkout-step">
+
+                <h2>
+                    Delivery Details
+                </h2>
+
+                <p>
+                    Enter your delivery information
+                </p>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        maxlength="10"
+                        placeholder="10-digit mobile number">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Address
+                    </label>
+
+                    <textarea
+                        id="customerAddress"
+                        placeholder="House / Street / Area"></textarea>
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerCity"
+                            placeholder="City">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Pincode
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerPincode"
+                            maxlength="6"
+                            placeholder="6-digit pincode">
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-summary">
+
+                    <h3>
+                        Order Summary
+                    </h3>
+
+                    <div id="addressSummaryItems">
+                    </div>
+
+
+                    <div class="checkout-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="addressTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="continue-button"
+                    onclick="goToPayment()">
+
+                    Continue to Payment →
+
+                </button>
+
+            </div>
+
+
+            <!-- PAYMENT STEP -->
+            <div
+                id="paymentStep"
+                class="checkout-step"
+                style="display:none;">
+
+                <h2>
+                    Choose Payment Method
+                </h2>
+
+                <p>
+                    Select your preferred payment option
+                </p>
+
+
+                <div class="payment-options">
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="UPI">
+
+                        <span>
+                            📱
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                UPI
+                            </strong>
+
+                            <small>
+                                Google Pay / PhonePe / Paytm
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="Card">
+
+                        <span>
+                            💳
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Credit / Debit Card
+                            </strong>
+
+                            <small>
+                                Visa / Mastercard / RuPay
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="COD">
+
+                        <span>
+                            💵
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Cash on Delivery
+                            </strong>
+
+                            <small>
+                                Pay when your order arrives
+                            </small>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <div class="checkout-summary">
+
+                    <h3>
+                        Delivery To
+                    </h3>
+
+                    <p id="customerAddressSummary">
+                    </p>
+
+                </div>
+
+
+                <div class="checkout-summary">
+
+                    <h3>
+                        Order Summary
+                    </h3>
+
+                    <div id="paymentSummaryItems">
+                    </div>
+
+
+                    <div class="checkout-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="paymentTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-buttons">
+
+                    <button
+                        class="back-button"
+                        onclick="goBackToAddress()">
+
+                        ← Back
+
+                    </button>
+
+
+                    <button
+                        class="continue-button"
+                        onclick="placeOrder()">
+
+                        Place Order
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUCCESS STEP -->
+            <div
+                id="successStep"
+                class="checkout-step success-step"
+                style="display:none;">
+
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+
+                <h2>
+                    Order Confirmed!
+                </h2>
+
+
+                <p>
+                    Thank you for shopping with Glowora.
+                </p>
+
+
+                <p>
+                    Your order has been successfully placed.
+                </p>
+
+
+                <div class="order-details">
+
+                    <span>
+                        Order ID
+                    </span>
+
+                    <strong id="orderId">
+                        GW00000000
+                    </strong>
+
+                </div>
+
+
+                <div class="order-details">
+
+                    <span>
+                        Total Paid
+                    </span>
+
+                    <strong id="finalTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="continue-button"
+                    onclick="finishOrder()">
+
+                    Continue Shopping
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        id="toast"
+        class="toast">
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
