@@ -351,62 +351,71 @@ a {
     background: var(--surface);
 }
 
+
+/* ================================
+   Template Images
+================================ */
+
 .template-image {
-    height: 300px;
-    display: flex;
-    align-items: flex-end;
-    padding: 25px;
+    height: 360px;
+    width: 100%;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #18181b;
+    padding: 0;
 }
+
+
+/* Actual screenshot */
+
+.template-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Remove decorative circles from screenshot area */
 
 .template-image::before,
 .template-image::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(2px);
+    display: none;
 }
 
-.template-image::before {
-    width: 220px;
-    height: 220px;
-    top: -70px;
-    right: -50px;
-    background: #27272a;
-}
 
-.template-image::after {
-    width: 170px;
-    height: 170px;
-    bottom: -80px;
-    left: -40px;
-    background: #3f3f46;
-}
-
-.template-image span {
-    position: relative;
-    z-index: 2;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: #e4e4e7;
-}
+/* Category background colors */
 
 .food-preview {
-    background: linear-gradient(135deg, #18181b, #27272a);
+    background: #18181b;
 }
 
 .movie-preview {
-    background: linear-gradient(135deg, #09090b, #3f3f46);
+    background: #09090b;
 }
 
 .clothing-preview {
-    background: linear-gradient(135deg, #18181b, #52525b);
+    background: #18181b;
 }
 
 .music-preview {
-    background: linear-gradient(135deg, #111113, #27272a);
+    background: #111113;
 }
+
+
+/* ================================
+   Template Information
+================================ */
 
 .template-info {
     padding: 22px;
@@ -429,6 +438,11 @@ a {
 .template-info a {
     color: #d4d4d8;
     font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.template-info a:hover {
+    color: #ffffff;
 }
 
 
@@ -577,6 +591,10 @@ a {
 }
 
 
+/* ================================
+   Tablet / Mobile
+================================ */
+
 @media (max-width: 700px) {
 
     .nav-links {
@@ -652,8 +670,20 @@ a {
     .footer-links {
         flex-wrap: wrap;
     }
+
+
+    /* Template screenshots on mobile */
+
+    .template-image {
+        height: 300px;
+    }
+
 }
 
+
+/* ================================
+   Small Mobile
+================================ */
 
 @media (max-width: 450px) {
 
@@ -673,4 +703,12 @@ a {
     .visual-card h3 {
         font-size: 19px;
     }
+
+
+    /* Smaller screenshot area */
+
+    .template-image {
+        height: 260px;
+    }
+
 }
