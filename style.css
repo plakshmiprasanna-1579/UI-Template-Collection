@@ -191,59 +191,25 @@ a {
 
 .hero-visual {
     position: relative;
-    height: 500px;
-}
-
-.visual-card {
-    position: absolute;
-    width: 210px;
-    height: 270px;
-    padding: 22px;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: var(--surface);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
-    transition: transform 0.4s ease;
+    align-items: center;
+    justify-content: center;
 }
 
-.visual-card:hover {
-    transform: translateY(-10px) rotate(0deg);
-}
+/* Generated hero image */
 
-.visual-card span {
-    color: #71717a;
-    font-size: 12px;
-}
-
-.visual-card h3 {
-    font-size: 24px;
-}
-
-.card-one {
-    top: 40px;
-    left: 40px;
-    transform: rotate(-8deg);
-}
-
-.card-two {
-    top: 25px;
-    right: 25px;
-    transform: rotate(7deg);
-}
-
-.card-three {
-    bottom: 20px;
-    left: 80px;
-    transform: rotate(6deg);
-}
-
-.card-four {
-    bottom: 40px;
-    right: 45px;
-    transform: rotate(-7deg);
+.hero-visual img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-72%, -50%);
 }
 
 
@@ -576,8 +542,9 @@ a {
     }
 
     .hero-visual {
-        max-width: 650px;
+        max-width: 700px;
         width: 100%;
+        height: 550px;
         margin: auto;
     }
 
@@ -619,25 +586,10 @@ a {
         height: 430px;
     }
 
-    .visual-card {
-        width: 160px;
-        height: 210px;
-    }
-
-    .card-one {
-        left: 0;
-    }
-
-    .card-two {
-        right: 0;
-    }
-
-    .card-three {
-        left: 35px;
-    }
-
-    .card-four {
-        right: 20px;
+    .hero-visual img {
+        height: 100%;
+        left: 50%;
+        transform: translate(-72%, -50%);
     }
 
     .section {
@@ -677,7 +629,6 @@ a {
     .template-image {
         height: 300px;
     }
-
 }
 
 
@@ -692,16 +643,13 @@ a {
     }
 
     .hero-visual {
-        height: 380px;
+        height: 360px;
     }
 
-    .visual-card {
-        width: 135px;
-        height: 180px;
-    }
-
-    .visual-card h3 {
-        font-size: 19px;
+    .hero-visual img {
+        height: 100%;
+        left: 50%;
+        transform: translate(-72%, -50%);
     }
 
 
@@ -710,5 +658,4 @@ a {
     .template-image {
         height: 260px;
     }
-
 }
